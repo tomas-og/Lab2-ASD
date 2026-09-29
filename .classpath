@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/tomas/Downloads/Lab 2/onnxruntime-1.24.3.jar"/>
+	<classpathentry kind="lib" path="onnxruntime-1.24.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
