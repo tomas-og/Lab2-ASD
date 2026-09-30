@@ -1,0 +1,56 @@
+ZOO DATASET - DATA DICTIONARY
+==============================
+
+Source: UCI Machine Learning Repository - Zoo Data Set (Forsyth, 1990)
+        https://archive.ics.uci.edu/dataset/111/zoo
+
+File: zoo.csv
+101 animals, 18 columns (16 input features + 2 label columns).
+
+COLUMNS
+-------
+animal_name   Text. Name of the animal. NOT used as a training feature -
+              it is just an identifier.
+
+The 16 INPUT FEATURES (what the models learn from):
+
+  hair        1 = has hair, 0 = does not
+  feathers    1 = has feathers, 0 = does not
+  eggs        1 = lays eggs, 0 = does not
+  milk        1 = produces milk, 0 = does not
+  airborne    1 = can fly, 0 = cannot
+  aquatic     1 = lives in water, 0 = does not
+  predator    1 = is a predator, 0 = is not
+  toothed     1 = has teeth, 0 = does not
+  backbone    1 = has a backbone, 0 = does not
+  breathes    1 = breathes air, 0 = does not
+  venomous    1 = is venomous, 0 = is not
+  fins        1 = has fins, 0 = does not
+  legs        Number of legs: one of 0, 2, 4, 5, 6, 8
+  tail        1 = has a tail, 0 = does not
+  domestic    1 = commonly domesticated, 0 = is not
+  catsize     1 = is roughly cat-sized or larger, 0 = is not
+
+The 2 LABEL COLUMNS (what the models try to predict):
+
+  class_type  Numeric class, 1-7. This is the label the models are
+              trained on.
+  class_name  Same information as class_type, spelled out. Added for
+              readability - not used for training.
+
+CLASS_TYPE -> CLASS_NAME MAPPING
+---------------------------------
+  1  mammal        (41 animals, e.g. aardvark, bear, wolf)
+  2  bird          (20 animals, e.g. chicken, crow, penguin)
+  3  reptile       (5 animals,  e.g. tortoise, seasnake)
+  4  fish          (13 animals, e.g. bass, herring, tuna)
+  5  amphibian     (4 animals,  e.g. frog, newt, toad)
+  6  insect        (8 animals,  e.g. flea, honeybee, wasp)
+  7  invertebrate  (10 animals, e.g. crab, octopus, starfish)
+
+WHY 16 FEATURES AND NOT 17?
+----------------------------
+The original UCI description lists 17 Boolean attributes, but
+animal_name is really an identifier, not a feature, so it is excluded
+from training. That leaves 16 real input features feeding a 7-class
+classifier.

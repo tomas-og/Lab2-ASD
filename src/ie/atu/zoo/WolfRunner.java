@@ -5,9 +5,10 @@ public class WolfRunner {
 	
 	void main() throws Exception {
 		var fac = ZooBuilderFactory.getInstance();
-		var zoo = fac.newZooBuilder(Model.NEURAL_NETWORK);
+		//var zoo = fac.newZooBuilder(Model.NEURAL_NETWORK);
+		  var zoo = fac.newZooBuilder(Model.SUPPORT_VECTOR_MACHINE);
 		
-	    //(1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 4, 1, 0, 1);
+	    //(1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 4, 1, 0, 1); 
 		Prediction result = zoo.withHair(true)
 							   .withFeathers(false)
 							   .withEggs(false)
